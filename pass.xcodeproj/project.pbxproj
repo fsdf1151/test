@@ -15,6 +15,7 @@
 		15FD6F1A23A920EB00215DAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15FD6F1923A920EB00215DAF /* Assets.xcassets */; };
 		15FD6F1D23A920EB00215DAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15FD6F1B23A920EB00215DAF /* LaunchScreen.storyboard */; };
 		15FD6F2023A920EB00215DAF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FD6F1F23A920EB00215DAF /* main.m */; };
+		2912CF95BB08B91EA96C59A6 /* libPods-pass.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60AED663870D16852E27D1E0 /* libPods-pass.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,9 @@
 		15FD6F1C23A920EB00215DAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15FD6F1E23A920EB00215DAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15FD6F1F23A920EB00215DAF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		60AED663870D16852E27D1E0 /* libPods-pass.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pass.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7AE0C1BFF6D8F84FD0847F8 /* Pods-pass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pass.release.xcconfig"; path = "Pods/Target Support Files/Pods-pass/Pods-pass.release.xcconfig"; sourceTree = "<group>"; };
+		D5F106E3C87B6B2DF1B9CC43 /* Pods-pass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pass.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pass/Pods-pass.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2912CF95BB08B91EA96C59A6 /* libPods-pass.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +54,8 @@
 			children = (
 				15FD6F0923A920E900215DAF /* pass */,
 				15FD6F0823A920E900215DAF /* Products */,
+				AF726C56681352C012D35D94 /* Pods */,
+				B7062436F76C472E9F7673CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +86,23 @@
 			path = pass;
 			sourceTree = "<group>";
 		};
+		AF726C56681352C012D35D94 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D5F106E3C87B6B2DF1B9CC43 /* Pods-pass.debug.xcconfig */,
+				B7AE0C1BFF6D8F84FD0847F8 /* Pods-pass.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B7062436F76C472E9F7673CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60AED663870D16852E27D1E0 /* libPods-pass.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15FD6F2323A920EB00215DAF /* Build configuration list for PBXNativeTarget "pass" */;
 			buildPhases = (
+				A8DB701761C3A2084F6735CF /* [CP] Check Pods Manifest.lock */,
 				15FD6F0323A920E900215DAF /* Sources */,
 				15FD6F0423A920E900215DAF /* Frameworks */,
 				15FD6F0523A920E900215DAF /* Resources */,
+				06ED2311E617703DFE8D330D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -143,6 +169,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06ED2311E617703DFE8D330D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-pass/Pods-pass-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pass/Pods-pass-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8DB701761C3A2084F6735CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-pass-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		15FD6F0323A920E900215DAF /* Sources */ = {
@@ -291,6 +364,7 @@
 		};
 		15FD6F2423A920EB00215DAF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5F106E3C87B6B2DF1B9CC43 /* Pods-pass.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -308,6 +382,7 @@
 		};
 		15FD6F2523A920EB00215DAF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7AE0C1BFF6D8F84FD0847F8 /* Pods-pass.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
